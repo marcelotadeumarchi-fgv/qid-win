@@ -1,0 +1,4 @@
+*.parquet
+resultados/**/grade.parquet
+*.parquet
+resultados/**/grade.parquet

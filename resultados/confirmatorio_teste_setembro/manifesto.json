@@ -1,0 +1,78 @@
+{
+  "protocolo_versao": "1.0",
+  "executado_em": "2026-10-04T16:31:04",
+  "script": "/home/marchi/financial_ai_project/qid_win/code/28_protocolo_hft_win.py",
+  "script_sha256": "9d7f5aea9e8a962fad0efa100bf9f9ea0cc489955d7b1de8aab5004aebf015f1",
+  "dados": "/home/marchi/financial_ai_project/qid_win/melhores_ofertas_win.parquet",
+  "dados_sha256": "f553fcf5009f180a5453b0686c6a78806915d564450fb76c79afddb45fea3da9",
+  "etapas": [
+    "diag",
+    "h1",
+    "pred_qi",
+    "filas",
+    "rompimento",
+    "linha",
+    "rlp_filas",
+    "qid",
+    "qid_dr",
+    "qid_curto"
+  ],
+  "parametros": {
+    "parquet_path": "melhores_ofertas_win.parquet",
+    "saida_dir": "resultados/confirmatorio_teste_setembro",
+    "dt_ms": 100,
+    "tick": 5.0,
+    "margem_inicio_s": 300,
+    "margem_fim_s": 300,
+    "cols_lit": [
+      "negocio_qtd_l",
+      "negocio_qtd_sem_condicao"
+    ],
+    "cols_rl": [
+      "negocio_qtd_rl"
+    ],
+    "cols_lrl": [
+      "negocio_qtd_l_rl"
+    ],
+    "h1_intervalo_s": 10,
+    "h1_bloco_min": 30,
+    "h1_min_obs": 30,
+    "horizontes_s": [
+      1,
+      5,
+      30,
+      60,
+      300
+    ],
+    "var_intervalo_ms": 1000,
+    "var_lags": 10,
+    "var_horizonte_ir": 120,
+    "qid_intervalo": "1m",
+    "qid_min_eventos": 5,
+    "qid_definicao": "diferenca",
+    "reversao_horizonte": 5,
+    "dias_treino": 0,
+    "hac_lags_qid": 5,
+    "atrasos_s": [
+      0.01,
+      0.1
+    ],
+    "esgotamento_s": 0.1,
+    "filas_lim_prox_s": 60,
+    "rlp_intervalo": "5m",
+    "rompimento_janela_s": 1.0,
+    "rompimento_limiar": 0.8,
+    "dr_min_saltos": 20,
+    "curto_janela_saltos": 500
+  },
+  "margem_equivalencia_ticks": 0.15,
+  "alfa_familia": 0.05,
+  "versoes": {
+    "python": "3.12.3",
+    "polars": "1.34.0",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "statsmodels": "0.15.0",
+    "scipy": "1.16.2"
+  }
+}
